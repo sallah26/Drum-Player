@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+            justify-content: center;
+            background-image: url('images/back.avif');
+            background-repeat: no-repeat;
+            background-size: cover;
+           
+        }
+        h1{
+            font-size: 80px;
+            color: rgb(50, 252, 0);
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+            
+        }
+        h2{
+            color: aliceblue;
+        }
+        .drums{
+            display: flex;
+            margin-top: 100px;
+            text-align: center;
+            justify-content: center;
+        }
+        button{
+            
+            width: 160px;
+            height: 160px;
+            position: relative;
+            margin: 10px;
+            padding: 0px;
+            border: 5px solid rgb(19, 30, 31);
+            cursor: pointer;
+            border-radius: 10%;
+        }
+        h3{
+            color: rgb(141, 1, 255);
+            position: relative;
+            font-size: 80px;
+            margin-top: 20px;
+        }
+        button:hover{
+            background-color:  rgb(117, 39, 39);;
+        }
+        #btn1{
+            background-image: url('images/drumkebero.jpg');
+        }
+        #btn2{
+            background-image: url('images/drumplate.jpg');
+        }
+        #btn3{
+            background-image: url('images/images.jpg');
+        }
+        #btn4{
+            background-image: url('images/images\ \(1\).jpg');
+        }
+        #btn5{
+            background-image: url('images/images\ \(2\).jpg');
+        }
+        #btn6{
+            background-image: url('images/images\ \(3\).jpg');
+        }
+        #btn7{
+            background-image: url('images/plateee.jpg');
+        }
+        #btn8{
+            background-image: url('images/images\ \(2\).jpg');
+        }
+    </style>
+</head>
+<body>
+    <h1 id="fir id2">Drum 👳‍♂️ Kit</h1>
+    <h2>Press the letters of keyboard to play given sound</h2>
+    <div class="drums">
+
+        <button id="btn1" class="a drum"><h3>Q</h3></button>
+        <button id="btn2" class="b drum"><h3>W</h3></button>
+        <button id="btn3" class="c drum"><h3>D</h3></button>
+        <button id="btn4" class="d drum"><h3>C</h3></button>
+        <button id="btn5" class="e drum"><h3>M</h3></button>
+        <button id="btn6" class="f drum"><h3>K</h3></button>
+        <button id="btn7" class="g drum"><h3>O</h3></button>
+        <button id="btn8" class="g drum"><h3>P</h3></button>
+    </div>
+    <script>
+        
+        document.addEventListener("keypress",function(event){
+            makeSound(event.key);
+        });
+       
+        function makeSound(key){
+            switch(key){
+                case "q":
+                    var audio = new Audio("sounds/drum-and-percussion-545.wav");
+                    audio.play(); 
+                    break;
+                case "w":
+                    var audio = new Audio("sounds/bad-joke-drums-2893.wav");
+                    audio.play();
+                    break;
+                case "d":
+                    var audio = new Audio("sounds/drum-bass-hit-2294.wav");
+                    audio.play();
+                    break;
+                case "c":
+                    var audio = new Audio("sounds/hand-tribal-drum-562.wav");
+                    audio.play();
+                    break;
+                case "m":
+                    var audio = new Audio("sounds/tribal-dry-drum-558.wav");
+                    audio.play();
+                    break;
+                case "k":
+                    var audio = new Audio("sounds/toy-drums-and-bell-ding-560.wav");
+                    audio.play();
+                    break;
+                case "o":
+                    var audio = new Audio("sounds/fail-drum-and-xylophone-568.wav");
+                    audio.play();
+                    break;
+                case "p":
+                   var audio = new Audio("sounds/joke-drums-578.wav");
+                   audio.play();
+                    break;
+                default:
+                    alert("Unknown button has been detected");
+            }
+
+        }
+
+        
+    
+    </script>
+</body>
+</html>
